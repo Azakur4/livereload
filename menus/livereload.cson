@@ -1,0 +1,15 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-workspace': [{label: 'Toggle LiveReload', command: 'livereload:toggle'}]
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'LiveReload'
+      'submenu': [
+        { 'label': 'Toggle Server', 'command': 'livereload:toggle' }
+      ]
+    ]
+  }
+]
