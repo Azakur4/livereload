@@ -3,6 +3,14 @@ livereloadStatusView = null
 eventSubscription = null
 
 module.exports =
+  config:
+    exts:
+      type: 'array'
+      default: ['']
+      items:
+        type: 'string'
+        default: ''
+
   livereloadView: null
 
   activate: (state) ->
@@ -23,7 +31,7 @@ module.exports =
   deactivate: ->
     eventSubscription?.dispose()
     eventSubscription = null
-    
+
     livereloadStatusView?.destroy()
     livereloadStatusView = null
 

@@ -27,7 +27,8 @@ class LivereloadView
 
     @server = livereload.createServer {
       port: @port,
-      exclusions: ['.DS_Store']
+      exclusions: ['.DS_Store'],
+      exts: atom.config.get('livereload.exts'),
     }
 
     @server.config.server
